@@ -1,0 +1,15 @@
+Mecha Car MPG Analysis
+
+Variables/coefficients that provide non-random variance
+
+vehicle length, ground clearance
+
+
+Slope of model
+
+The R-squared value is 0.7149 which is closer to 1 than 0.
+
+
+Does linear model predict mpg effectively?
+
+While the R-squared value is 0.7149, meaning there is a high correlation, a point of concern is the p-value for the intercept. This indicates that there are other factors not included in this model that have an impact on mpg. We've identified two factors that do have a high amount of variance, but there are other factors no included in this data set.
