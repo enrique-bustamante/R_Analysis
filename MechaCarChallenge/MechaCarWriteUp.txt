@@ -1,15 +1,56 @@
+
+
 Mecha Car MPG Analysis
 
-Variables/coefficients that provide non-random variance
-
-vehicle length, ground clearance
+The variables/coefficients that provided non-random variance to mpg datasets were vehicle length and ground clearance. They both had a p-value of less than 0.05 when ran through the multi-linear regression.
 
 
-Slope of model
-
-The R-squared value is 0.7149 which is closer to 1 than 0.
+The slope of the model is not considered zero. The R-squared value is 0.7149 which is closer to 1 than 0.
 
 
-Does linear model predict mpg effectively?
+The linear mode does not effectively predict mpg entirely, however. While the R-squared value is 0.7149, meaning there is a high correlation, a point of concern is the p-value for the intercept. This indicates that there are other factors not included in this model that have an impact on mpg. We've identified two factors that do have a high amount of variance, but there are other factors not included in this data set.
 
-While the R-squared value is 0.7149, meaning there is a high correlation, a point of concern is the p-value for the intercept. This indicates that there are other factors not included in this model that have an impact on mpg. We've identified two factors that do have a high amount of variance, but there are other factors no included in this data set.
+
+
+Suspension Coil Analysis
+
+Does the current manufacturing data meet the requirement of less than 100 variance? If we look at the entire set of data, the variance is within the allowed limit of 100. However, when we group by the different lots, Lot 3 has a variance of 220, which is beyond the accepted limit of variance. This would mean that Lots 1 and 2 are producing suspension coils properly, while Lot 3 is not.
+
+
+Suspension Coil T-test
+
+Since we are comparing a sample to a population with a given mean of 1500 psi, we should use a one tailed T-test to determine if there is a significant difference or not. When we run the T-test, we produce a p-value of 0.5117, which indicates that there is not enough of a significant difference to reject our null hypothesis. This means there is no significant difference.
+
+
+Statistical Study Design
+
+First, I looked up the most important factors in buying a car according to Statista (www.statista.com). The following factors ended up being the most important factors in the car buying decision-making process:
+
+cost
+fuel efficiency
+safety
+quality
+warranty and customer service
+suitable for everyday use
+comfort
+design
+spaciousness
+
+
+If we wanted to conduct our own experiment, I would list the following questions using a Likert scale to determine the most important factors to look at:
+
+How important is cost in making your decision?
+How important is fuel efficiency in making your decision?
+How important is safety rating in making your decision?
+How important is the quality of the vehicle in making your decision?
+How important is the coverage warranty and customer service in making your decision?
+How important is suitability for everyday use in making your decision?
+How important is comfort in making your decision?
+How important is the design in making your decision?
+How important is spaciousness in making your decision?
+
+We would conduct a survey and gather the responses. Since this is ordinal data, the preferred test would either be a Mann-Whitney U test or chi-squared test. The null hypothesis would be that no factor is significantly more important to the consumer than any other. The alternative hypothesis would be that there are factors that are more important to the consumers than others. The factors that have a significant difference would be the focus of our next round of testing.
+
+The next level of testing would be dependent on the data we look at. Looking at numerical data such as cost, fuel efficiency, safety ratings, and spaciousness, we would compare similar data from competitors and use a two-tailed T-Test to determine if there is a significant difference in performance. If we look at quality, warranty and customer service, daily use, comfort, and design, these are more subjective and may be collected using another Likert scale or another categorical data type. Ideally, we'd use a chi-squared test to find any significant difference.
+
+The null hypothesis for this round of tests would be that there is no significant difference between the MechaCar and its competitors in each factor we're looking at. The alternate hypothesis would be that the MechaCar does have a statistically valid difference in the specific factor being looked at. Once the statistical diferences were discovered and calculated, we would publish the findings of the advantages of the MechaCar to its competitors backed by the statistical analysis.
